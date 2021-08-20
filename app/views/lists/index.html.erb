@@ -1,8 +1,13 @@
 <h2>All lists</h2>
-<%= link_to "Add new list", new_list_path  %>
+
+
+<%= link_to "Add a new list", new_list_path  %>
 <br>
-<% @lists.each do |list| %>
-<li>
-  <%= link_to list.name, list_path(list) %>
-</li>
-<% end %>
+
+<div grid-list>
+  <% @lists.each do |list| %>
+  <div class="card-list" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://source.unsplash.com/800x400/?#{list.name}")'>
+    <%= link_to list.name, list_path(list) %>
+  </div>
+  <% end %>
+</div>
