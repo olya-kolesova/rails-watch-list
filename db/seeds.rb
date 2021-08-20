@@ -6,13 +6,12 @@ require "open-uri"
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-movie = Movie.create(
+Movie.create(
   title: "Wonder Woman 1984",
   overview: "Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s",
   poster_url: "https://image.tmdb.org/t/p/original/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
   rating: 6.9
 )
-movie.photo.attach
 Movie.create(
   title: "The Shawshank Redemption",
   overview: "Framed in the 1940s for double murder, upstanding banker Andy Dufresne begins a new life at the Shawshank prison",
@@ -30,3 +29,8 @@ Movie.create(
   poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
   rating: 7.0
 )
+
+Movies.all.each_with_index do |movie, index|
+  file = URI.open(movie.poster_url)
+  movie.photo.attach(io: file, filename: "#{index}.png", content_type: 'image/png')
+end
