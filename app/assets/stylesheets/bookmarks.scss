@@ -1,3 +1,107 @@
 // Place all the styles related to the bookmarks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.container-bookmark {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-list {
+  height: 100vh;
+  background-size: cover;
+}
+
+.title-bookmark {
+  font-size: 256px;
+  font-family: 'Work Sans';
+  font-weight: 600;
+  color: #E2DED3;
+  margin: 960px 400px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.card-bookmark {
+  background-color: #857671;
+}
+
+.comment-bookmark {
+  font-size: 48px;
+  font-family: 'Work Sans';
+  margin-bottom: 32px;
+}
+
+.fa-trash:before {
+  color: #E2DED3;
+  margin-left: 16px;
+}
+
+
+.card-bookmark img {
+  margin-bottom: 16px;
+  margin-top: 16px;
+  box-shadow: 0 0 80px #222831;
+
+}
+
+.title-movie {
+  margin-top: 32px;
+  font-size: 64px;
+  font-family: 'Work Sans';
+  font-weight: 600;
+}
+
+.text-overview {
+  font-size: 48px;
+  text-align: left;
+  padding: 56px;
+  height: 560px;
+}
+
+.title-rating {
+  font-size: 56px;
+  font-family: 'Work Sans';
+  font-weight: 600;
+  margin-bottom: 64px;
+}
+
+.pic-title {
+  padding: 32px;
+  background-color: #4E413B;
+  width: 1200px;
+  margin: 0 auto;
+  color: #E2DED3;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  box-shadow: 0 0 80px #222831;
+}
+
+.container {
+  font-size: 56px;
+  border: 2px solid #857671;
+  border-radius: 16px;
+  padding: 160px 240px;
+  margin: 240px auto;
+}
+
+label.string.optional, label.select.required {
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+}
+
+input.btn {
+  border-radius: 16px;
+  margin-top: 32px;
+}
+
+
+input#bookmark_comment, select#bookmark_movie_id {
+  font-size: 56px;
+}
+
+
+.container-xl, .container-lg, .container-md, .container-sm, .container {
+  max-width: 2000px;
+}

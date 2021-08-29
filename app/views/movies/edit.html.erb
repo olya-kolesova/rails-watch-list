@@ -1,0 +1,10 @@
+<div class="container">
+  <h3>Add a new movie</h3>
+  <%= simple_form_for [@movie] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :overview %>
+  <%= f.input :rating %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Edit movie", class: "btn" %>
+  <% end %>
+</div>

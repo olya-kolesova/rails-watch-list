@@ -2,13 +2,86 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.grid-list {
-  grid-template-columns: 1fr 1fr 1fr;
+.navbar {
+  background-color: #4E413B;
+  padding: 0;
+  box-shadow: 2px 2px 3px #222831;
+}
+
+.btn {
+  margin: 0;
+  padding: 16px 16px;
+  background-color: #4E413B;
+  box-shadow: 0px 0px 3px #222831;
+  color: #E2DED3;
+  font-weight: 700;
+  font-size: 56px;
+}
+
+#add {
+  margin-right: 200px;
+}
+
+.btn:hover {
+  color: #FF6D24;
 }
 
 .card-list {
+  display: flex;
+  justify-content: center;
+  margin: 64px auto;
+  box-shadow: 2px 2px 3px #222831;
+  border: 2px solid #4E413B;
+  border-radius: 8px;
   background-size: cover;
-  width: 400px;
-  height: 300px;
-  padding: 50px;
+  width: 1200px;
+  height: 1600px;
+  padding: 160px 80px;
+}
+
+.titles-list {
+  font-size: 80px;;
+  font-weight: 800;
+  color: #E2DED3;
+  box-shadow: 1px 1px 3px #000000a6;
+  padding: 8px 16px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.titles-list:hover {
+  text-decoration: none;
+  color: #FF6D24;
+
+}
+
+
+.grid-list {
+  background-color: #857671;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container {
+    font-size: 56px;
+    border: 2px solid #857671;
+    border-radius: 16px;
+    padding: 160px 240px;
+    margin: 240px auto;
+}
+
+.container h3 {
+  font-size: 64px;
+  font-weight: 600;
+  font-family: 'Work Sans';
+  color: #FF6D24;
+}
+
+input#movie_title, textarea#movie_overview, input#movie_rating {
+  font-size: 56px;
+}
+
+input#list_name {
+  font-size: 56px;
 }

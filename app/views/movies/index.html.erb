@@ -1,0 +1,19 @@
+<div class="navbar">
+  <%= link_to "Back to lists", lists_path,  class: "btn"%>
+  <%= link_to "add a movie", new_movie_path(@list), class: "btn" %>
+</div>
+<div class="grid-movie">
+  <% @movies.each do |movie| %>
+  <div class="card-movie">
+    <%= cl_image_tag movie.photo.key, height: 800, width: 600, crop: :fill %>
+    <div class="info-movie">
+      <h3>
+        <%= movie.title %>
+        <%= link_to "edit movie", edit_movie_path(movie.id), class: "btn"%>
+      </h3>
+      <h6 class="text-overview-movie"><%= movie.overview %></h6>
+      <h5>Rating: <%= movie.rating %></h5>
+    </div>
+  </div>
+  <% end %>
+</div>

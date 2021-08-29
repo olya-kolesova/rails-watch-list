@@ -1,13 +1,16 @@
-<h2>All lists</h2>
-
-
-<%= link_to "Add a new list", new_list_path  %>
-<br>
-
-<div grid-list>
+<div class="navbar">
+  <div>
+    <%= link_to "add a new list", new_list_path,  class: "btn"%>
+  </div>
+  <div class="movies-buttons">
+    <%= link_to "add a movie", new_movie_path, class: "btn", id: "add" %>
+    <%= link_to "movies' list", movies_path, class: "btn" %>
+  </div>
+</div>
+<div class="grid-list">
   <% @lists.each do |list| %>
-  <div class="card-list" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://source.unsplash.com/800x400/?#{list.name}")'>
-    <%= link_to list.name, list_path(list) %>
+  <div class="card-list" style='background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("<%= cl_image_path list.photos[0].key, height: 800, width: 600, crop: :fill %>")'>
+    <%= link_to list.name, list_path(list), class: "titles-list"%>
   </div>
   <% end %>
 </div>

@@ -30,7 +30,7 @@ Movie.create(
   rating: 7.0
 )
 
-Movies.all.each_with_index do |movie, index|
+Movie.all.each_with_index do |movie, index|
   file = URI.open(movie.poster_url)
-  movie.photo.attach(io: file, filename: "#{index}.png", content_type: 'image/png')
+  movie.photo.attach(io: file, filename: "#{index}.jpg", content_type: 'image/jpg')
 end

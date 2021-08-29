@@ -1,20 +1,33 @@
-<h2><%= @list.name %></h2>
-<br>
-<%= link_to "Add new bookmark", new_list_bookmark_path(@list) %>
-<h3>All bookmarks</h3>
-<div class='grid'>
+<div class="navbar">
+  <%= link_to "Back to lists", lists_path,  class: "btn"%>
+  <%= link_to "add a bookmark", new_list_bookmark_path(@list), class: "btn" %>
+</div>
+<div class="container-bookmark">
+  <div class="banner-list" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("<%= cl_image_path @list.photos[1].key, height: 1200, width: 1900, crop: :fill %>")' >
+    <h2 class="title-bookmark"><%= @list.name %></h2>
+    <br>
+  </div>
+  <div class='grid'>
   <% @list.bookmarks.each do |bookmark| %>
-    <div class="card">
-      <div>
-        <%= bookmark.comment %>
-        <%= link_to bookmark_path(bookmark), method: :delete, data: {confirm: "Are you sure?"} do %>
-        <i class="fas fa-trash"></i>
-        <% end %>
-      </div>
-      <div>
-        <p>Name of the movie: <%= bookmark.movie.title %> </p>
+    <div class="card-bookmark">
+      <div class="pic-title">
+        <div>
+          <h5 class="comment-bookmark">
+            <%= bookmark.comment %>
+            <%= link_to bookmark_path(bookmark), method: :delete, data: {confirm: "Are you sure?"} do %>
+            <i class="fas fa-trash"></i>
+            <% end %>
+          </h5>
+        </div>
+        <%= cl_image_tag bookmark.movie.photo.key, height: 1200, width: 900, crop: :fill %>
+        <h3 class="title-movie"><%= bookmark.movie.title %> </h3>
+        <p class="text-overview"><%= bookmark.movie.overview %></p>
+        <div class="rating">
+          <h6 class="title-rating">Rating: <%= bookmark.movie.rating %></h6>
+        </div>
       </div>
     </div>
-</div>
+  <% end %>
+  </div>
 
-<% end %>
+</div>
