@@ -12,17 +12,18 @@
 }
 
 .title-bookmark {
-  font-size: 256px;
+  font-size: 112px;
   font-family: 'Work Sans';
   font-weight: 600;
   color: #E2DED3;
-  margin: 960px 400px;
+  margin: 260px 200px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
+  width: 100%;
 }
 
 .card-bookmark {
@@ -30,7 +31,7 @@
 }
 
 .comment-bookmark {
-  font-size: 48px;
+  font-size: 24px;
   font-family: 'Work Sans';
   margin-bottom: 32px;
 }
@@ -40,23 +41,23 @@
   margin-left: 16px;
 }
 
-
 .card-bookmark img {
   margin-bottom: 16px;
   margin-top: 16px;
   box-shadow: 0 0 80px #222831;
-
+  width: 500px;
+  height: 700px;
 }
 
 .title-movie {
   margin-top: 32px;
-  font-size: 64px;
+  font-size: 48px;
   font-family: 'Work Sans';
   font-weight: 600;
 }
 
 .text-overview {
-  font-size: 48px;
+  font-size: 32px;
   text-align: left;
   padding: 56px;
   height: 560px;
@@ -66,29 +67,39 @@
   font-size: 56px;
   font-family: 'Work Sans';
   font-weight: 600;
-  margin-bottom: 64px;
+  font-size: 40px;
+  position: absolute;
+  bottom: 96px;
+  left: 216px;
 }
 
 .pic-title {
   padding: 32px;
   background-color: #4E413B;
-  width: 1200px;
   margin: 0 auto;
   color: #E2DED3;
   font-family: "Work Sans", "Helvetica", "sans-serif";
   box-shadow: 0 0 80px #222831;
+  height: 1642.67px;
+  position: relative;
 }
 
 .container {
-  font-size: 56px;
+  font-size: 48px;
   border: 2px solid #857671;
   border-radius: 16px;
-  padding: 160px 240px;
+  padding: 80px 120px;
   margin: 240px auto;
+  width: 50%;
+}
+
+.container h3 {
+  font-size: 48px;
 }
 
 label.string.optional, label.select.required {
   font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-size: 32px;
 }
 
 input.btn {
@@ -98,7 +109,7 @@ input.btn {
 
 
 input#bookmark_comment, select#bookmark_movie_id {
-  font-size: 56px;
+  font-size: 40px;
 }
 
 
